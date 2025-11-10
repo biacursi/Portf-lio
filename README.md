@@ -8,8 +8,6 @@ Você pode ver o projeto em ação clicando aqui!
 
 Nota: Substitua o link https://biacursi.github.io/seu-repositorio/ pela URL real do seu GitHub Pages quando você publicar.
 
-Nota: Sugiro que você tire um print da tela do seu portfólio, faça upload no Imgur e cole o link no lugar de https://i.imgur.com/link-da-sua-imagem.png.
-
 🌟 Principais Destaques
 Design Responsivo: A página se adapta perfeitamente a diferentes tamanhos de tela (desktop, tablet e mobile), utilizando Media Queries.
 

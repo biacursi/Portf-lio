@@ -1,78 +1,98 @@
-@media screen and (max-width:1200px) {
-    main{
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+@media screen and (max-width: 1200px) {
+  main {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .main-content{
-        width: 100%;
-        align-items: center;
-        
-        margin-bottom: 15%;
+  .main-content {
+    width: 100%;
+    align-items: center;
 
-    }
+    margin-bottom: 15%;
+  }
 
-    main .main-content .text, .techs{
-        text-align: center;
+  main .main-content .text,
+  .techs {
+    text-align: center;
+  }
 
-    }
-
-   main .main-content .text p{
+  main .main-content .text p {
     width: 100%;
     font-size: 0.9em;
-   }
+  }
 
-   main .techs .cards-container, .main-content .text p {
+  main .techs .cards-container,
+  .main-content .text p {
     margin-top: 32px;
-
-   }
-
+  }
 }
 
-@media screen and (max-width:700px){
-header{
+@media screen and (max-width: 700px) {
+  header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
+  }
 
-header h1{
+  header h1 {
     font-size: 2em;
+  }
 
-}
-
-header nav{
+  header nav {
     margin-top: 24px;
+  }
 
-}
-
-header nav a {
+  header nav a {
     font-size: 1em;
+  }
 
-}
-
-main .techs .cards-container .card {
+  main .techs .cards-container .card {
     width: 60px;
     height: 60px;
+  }
 
-}
+  main .main-content .text h2,
+  .main-content .techs h2 {
+    font-size: 1.8em;
+  }
 
-main .main-content .text h2, .main-content .techs h2{
-font-size: 1.8em;
-
-}
-
-main figure img {
+  main figure img {
     width: 250px;
     height: 250px;
-}
+  }
 
-main .techs .projects-container .projects img {
+  main .techs .projects-container .projects img {
     width: 250px;
+  }
 }
 
-}
+@media (max-width: 768px) {
+  /* 1. Muda o container .text para layout vertical */
+  main .main-content .text {
+    flex-direction: column; /* Fica um em cima do outro */
+    gap: 1.5rem; /* Diminui o espaço (agora vertical) */
+    width: 100%; /* Ocupa a largura total no celular */
+  }
 
+  /* 2. Diminui sua foto (figure) */
+  main figure img {
+    width: 250px; /* Tamanho menor para celular */
+    height: 250px; /* Tamanho menor para celular */
+    margin-bottom: 0; /* Remove margens que podem estar sobrando */
+  }
+
+  /* 3. Ajusta o texto "Sobre mim" */
+  main .main-content .text .sobre-mim p {
+    font-size: 1rem; /* Tamanho de fonte padrão para mobile */
+    max-width: 100%; /* Remove o '65ch' para ocupar a tela */
+    text-align: center; /* Opcional: centraliza o texto no mobile */
+  }
+
+  /* 4. Ajusta o <figcaption> (se você usou) */
+  main figure figcaption {
+    font-size: 1.2rem;
+  }
+}

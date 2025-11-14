@@ -1,136 +1,180 @@
 main {
-    padding: 5%;
-
+  padding: 5%;
 }
 
 main .main-content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main .main-content h2 {
-    margin-bottom: 2%;
-    font-size: 2.0em;
-    margin-top: 5%;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+  margin-top: 3em;
 }
 
 main .main-content .text p {
-    max-width: 65ch; 
-    font-size: 1.2em;
-    font-weight: 300;
-    line-height: 1.6;
+  max-width: 65ch;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.6;
 }
 
 /* CARDS ========= */
 
 main .techs .cards-container {
-    display: flex;
-    align-items: center;
-    gap: 1.8em; 
-    flex-wrap: wrap; 
+  display: flex;
+  align-items: center;
+  gap: 1.8em;
+  flex-wrap: wrap;
 }
 
 main .techs .cards-container .card {
-    width: 120px;
-    height: 120px;
-    padding: 10px;
-    background-color: #eee;
-    border-radius: 8px;
+  width: 120px;
+  height: 120px;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 8px;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    transition: box-shadow 0.25s ease-in-out;
+  transition: box-shadow 0.25s ease-in-out;
 }
 
 main .techs .cards-container img {
-    width: 80%;
+  width: 80%;
 }
 
 main .techs .cards-container .card:hover {
-    box-shadow: 0px 0px 8px rgb(215, 180, 250);
+  box-shadow: 0px 0px 8px rgb(215, 180, 250);
 }
 
 /* FIGURE ========= */
 
 main figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
 }
 
 main figure img {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%; 
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
 
-    margin-bottom: 1%;
-    border: 1px rgb(215, 180, 250) solid;
-    transition: box-shadow 0.2s ease-in-out; 
+  margin-bottom: 3%;
+  border: 1px rgb(215, 180, 250) solid;
+  transition: box-shadow 0.2s ease-in-out;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 main figure img:hover {
-    box-shadow: 0px 0px 6px rgb(215, 180, 250);
+  box-shadow: 0px 0px 6px rgb(215, 180, 250);
 }
 
 /* PROJECTS ========= */
 
 main .techs .projects-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 main .techs .projects-container .projects {
-    display: flex;
-    align-items: center; 
-    justify-content: space-around;
-    gap: 15px;
-    flex-wrap: wrap; 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+main .techs .projects-container .projects figure {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border-radius: 1em;
 }
 
 main .techs .projects-container .projects a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none; 
-    color: inherit; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-main .techs .projects-container span {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    padding: 0.4em 0.6em;
-    font-weight: 700;
-    border: 2px solid rgba(215, 180, 250);
-    border-radius: 8px;
-    margin-top: 2em;
+main .techs .projects-container .projects a:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+/* 2. O efeito no span quando o card (a) estiver em hover */
+main .techs .projects-container .projects a:hover figcaption {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-main .techs .projects-container span:hover {
-    background-color: rgba(215, 180, 250);
-    color: #222;
-    transition: ease-in-out 0.3s;
+main .techs .projects-container figcaption {
+  /* --- POSICIONAMENTO --- */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* --- ESTILO DO OVERLAY --- */
+  background-color: rgba(0, 0, 0, 0.65); /* Fundo escuro semi-transparente */
+  color: #fff;
+  /* --- CENTRALIZAÇÃO DO TEXTO --- */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* --- ESTADO INICIAL (ESCONDIDO) --- */
+  opacity: 0;
+
+  /* --- ANIMAÇÃO --- */
+  transform: translateY(100%); /* Começa "fora" do card, lá embaixo */
+  transition: all 0.4s ease-in-out;
+
+  /* Estilo do texto */
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1em; /* Padding interno para o texto não colar nas bordas */
 }
 
 main .techs .projects-container .projects img {
-    width: 100%; 
-    max-width: 400px; 
-    height: auto; 
-    aspect-ratio: 1 / 1; 
-    object-fit: cover; 
-    border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease-in-out;
+  border-radius: 0;
 }
 
-main .techs .projects-container .projects img:hover {
-    box-shadow: 20px 22px 15px #000;
-    transition: ease-in-out 0.3s;   
-    
+main .techs .projects-container .projects a:hover img {
+  transform: scale(1.1); /* Zoom sutil na imagem */
+}
+
+main .main-content .text {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+main .main-content .text .sobre-mim {
+  padding: 20px;
+  flex: 1;
 }

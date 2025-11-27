@@ -132,12 +132,9 @@ main .techs .projects-container figcaption {
   /* --- ESTILO DO OVERLAY --- */
   background-color: rgba(0, 0, 0, 0.65); /* Fundo escuro semi-transparente */
   color: #fff;
-  /* --- CENTRALIZAÇÃO DO TEXTO --- */
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* --- ESTADO INICIAL (ESCONDIDO) --- */
   opacity: 0;
 
   /* --- ANIMAÇÃO --- */
@@ -166,15 +163,7 @@ main .techs .projects-container .projects a:hover img {
 }
 
 main .main-content .text {
-  display: flex;
-  align-items: center;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 4rem;
-}
-
-main .main-content .text .sobre-mim {
-  padding: 20px;
-  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-evenly;
 }
